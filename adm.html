@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奖品后台管理页</title>
+</head>
+<body>
+    <div>
+        <button onclick="window.location.href='index.html'">前往抽奖界面</button>
+        <hr/>
+    </div>
+    <div class="bg">
+        <table id="form">
+            <tr id="head">
+                <th>奖品名称</th>
+                <th>奖品数量</th>
+                <th>奖品级别</th>
+                <th> </th>
+            </tr>
+        </table>
+        <hr/>
+        <div id="formctn">
+            <form id="addForm">
+                <p>
+                    <label>奖品名称</label>
+                    <input type="text" name="name"/>
+                </p>
+                <p>
+                    <label>奖品数量</label>
+                    <input type="number" value="99" name="count"/>
+                </p>
+                <p>
+                    <label>奖品级别</label>
+                    <select name="level">
+                        <option value="" selected>选择奖品级别</option>
+                        <option value="一等奖">一等奖</option>
+                        <option value="二等奖">二等奖</option>
+                        <option value="三等奖">三等奖</option>
+                        <option value="四等奖">四等奖</option>
+                        <option value="五等奖">五等奖</option>
+                        <option value="六等奖">六等奖</option>
+                    </select>
+                </p>
+            </form>
+            <button id="addItem">增加奖品</button>
+        </div>
+    </div>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/adm.js"></script>
+</body>
+</html>

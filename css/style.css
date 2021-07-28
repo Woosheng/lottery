@@ -1,0 +1,42 @@
+body{
+    width: 650px;
+    margin: 0px auto;
+}
+.bg{
+    /* overflow:hidden; 用于隐藏浮动超出的区域，但是好像这里不太适用*/
+
+    position: relative;
+    width: 650px;
+    height: 650px;
+    margin: 0px auto;
+}
+#form{
+    margin: 0px auto;
+}
+#formctn{
+    text-align: center;
+}
+#zhizhen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    /* height: 271px; */
+    transform: translateX(-50%) translateY(-50%);
+    margin: 0px auto;
+}
+#zhuanpan{
+    position: absolute;
+    /* top: 0px;
+    left: 0px; */
+    width: 650px;
+    height: 650px;
+    transition: all 5s;
+    margin: 0px auto;
+}
+table,tr,td,th{
+    text-align: center;
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
