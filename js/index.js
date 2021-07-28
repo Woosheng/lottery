@@ -8,16 +8,16 @@
     let cat = 0;//每个奖品扇形占据的度数
     let canRoll = false;//是否能转
 
-    let zhiZhen = document.getElementById("zhizhen");//获取指针用于点击事件触发
-    let zhuanPan = document.getElementById("zhuanpan");//获取转盘，用来转
+    let zhiZhen = document.getElementById("zhizhen");
+    let zhuanPan = document.getElementById("zhuanpan");
 
-    //向服务器获取奖品基本信息【但是据说现在JQ已经快被淘汰了，那现在浏览器和服务器的交互用什么呀？】
+    //向服务器获取奖品基本信息
     $.getJSON(getPrizeList,function(json){
         json.forEach(x => {
             prizeNameList.push(x['name']);
         });
         cat = 360/json.length;//每个奖品扇形占据的度数
-        draw(prizeNameList)//获取奖品列表后初始化各项参数，以及转盘绘制【后续用于绘制转盘】
+        draw(prizeNameList)//获取奖品列表后初始化各项参数，以及转盘绘制
     });
 
     //指针的点击抽奖，如果可以转，就向服务器请求抽奖，然后转到抽中奖品的位置
@@ -73,7 +73,7 @@
         degStart = degStart + deg - degStart % 360;
 
         //旋转到下一次旋转位置
-        zhuanPan.style.transform = `rotate(${degStart}deg)`//【没有找到很详细的关于style.stransform的用法，很奇怪？】
+        zhuanPan.style.transform = `rotate(${degStart}deg)`
 
         //旋转五秒钟结束后，显示抽奖结果，window.setTimeout(函数名，时延，...用于函数执行可能需要的可选参数)
         setTimeout(()=>{
